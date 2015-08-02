@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>The <i>this</i> keyword</h1>
+</div>
+
+<h2>Inside a function</h2>
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>As a function</h3>
+                <pre>read();</pre>
+                <a href="#/helloWorld">Example</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>As a method</h3>
+                <pre>book.read();</pre>
+                <a href="#/helloWorld">Example</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>As a constructor</h3>
+                <pre>var book = new Book();</pre>
+                <a href="#/helloWorld">Example</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Outside a function <small>global</small></h2>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>Strict Mode</h3>
+                <h4></h4>
+                <pre>this.window === window //false</pre>
+                <a href="#/helloWorld">Example</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>Not Strict</h3>
+                <pre>this.window === window //true</pre>
+                <a href="#/helloWorld">Example</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Changing <i>this</i></h2>
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>call</h3>
+                <pre>read.call(thisArg, theHeroOfAges);</pre>
+                <a href="#/helloWorld">Example</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>apply</h3>
+                <pre>
+read.apply(thisArg, [
+    mistBorn, 
+    theWellOfAssension,
+    theHeroOfAges
+]);
+</pre>
+                <a href="#/helloWorld">Example</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>bind</h3>
+                <pre>read.bind(thisArg);</pre>
+                <a href="#/helloWorld">Example</a>
+            </div>
+        </div>
+    </div>
+</div>
