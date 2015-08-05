@@ -121,6 +121,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -128,6 +129,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\changingThis\withApply.js" />
+    <Content Include="app\changingThis\withBind.js" />
+    <Content Include="app\changingThis\withCall.js" />
+    <Content Include="app\insideAFunction\asAConstructor.js" />
+    <Content Include="app\insideAFunction\asAFunction.js" />
+    <Content Include="app\insideAFunction\asAMethod.js" />
+    <Content Include="app\log.js" />
+    <Content Include="app\outsideAFunction\inStrictMode.js" />
+    <Content Include="app\outsideAFunction\notStrict.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -169,9 +179,16 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Demo\AsAFunction.cshtml" />
+    <Content Include="Views\Demo\AsAMethod.cshtml" />
+    <Content Include="Views\Demo\AsAConstructor.cshtml" />
+    <Content Include="Views\Demo\InStrictMode.cshtml" />
+    <Content Include="Views\Demo\NotStrict.cshtml" />
+    <Content Include="Views\Demo\Call.cshtml" />
+    <Content Include="Views\Demo\Apply.cshtml" />
+    <Content Include="Views\Demo\Bind.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
