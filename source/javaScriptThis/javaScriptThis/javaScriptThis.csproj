@@ -136,8 +136,7 @@
     <Content Include="app\insideAFunction\asAFunction.js" />
     <Content Include="app\insideAFunction\asAMethod.js" />
     <Content Include="app\log.js" />
-    <Content Include="app\outsideAFunction\inStrictMode.js" />
-    <Content Include="app\outsideAFunction\notStrict.js" />
+    <Content Include="app\outsideAFunction\topLevel.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -182,8 +181,7 @@
     <Content Include="Views\Demo\AsAFunction.cshtml" />
     <Content Include="Views\Demo\AsAMethod.cshtml" />
     <Content Include="Views\Demo\AsAConstructor.cshtml" />
-    <Content Include="Views\Demo\InStrictMode.cshtml" />
-    <Content Include="Views\Demo\NotStrict.cshtml" />
+    <Content Include="Views\Demo\topLevel.cshtml" />
     <Content Include="Views\Demo\Call.cshtml" />
     <Content Include="Views\Demo\Apply.cshtml" />
     <Content Include="Views\Demo\Bind.cshtml" />

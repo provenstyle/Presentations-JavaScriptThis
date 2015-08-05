@@ -3,62 +3,86 @@
 }
 
 <div class="jumbotron">
-    <h1>The <i>this</i> keyword</h1>
+    <h1><i>this</i></h1>
+    <p>5 rules for identifying the value of the JavaScript <i>this</i> keyword.</p>
 </div>
 
-<h2>Inside a function</h2>
+<h2>When inside a function, how was the function executed?</h2>
 
 <div class="row">
-    <div class="col-sm-4">
+
+    <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-body">
                 <h3>As a function</h3>
-                <pre>read();</pre>
+<pre>
+  
+read();
+
+</pre>
                 <a href="demo/asAFunction">Example</a>
             </div>
         </div>
     </div>
 
-    <div class="col-sm-4">
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>As a function in strict mode</h3>
+<pre>
+"strict mode";
+
+read();
+</pre>
+                <a href="demo/asAFunction">Example</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-body">
                 <h3>As a method</h3>
-                <pre>book.read();</pre>
+<pre>
+
+book.read();
+
+</pre>
                 <a href="demo/asAMethod">Example</a>
             </div>
         </div>
     </div>
 
-    <div class="col-sm-4">
+    <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-body">
                 <h3>As a constructor</h3>
-                <pre>var book = new Book();</pre>
+<pre>
+
+var book = new Book();
+
+</pre>
                 <a href="demo/asAConstructor">Example</a>
             </div>
         </div>
     </div>
 </div>
 
-<h2>Outside a function <small>global</small></h2>
 
+<h2>When outside a function</h2>
 <div class="row">
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-body">
-                <h3>Strict Mode</h3>
-                <h4></h4>
-                <pre>this.window === window //false</pre>
-                <a href="demo/inStrictMode">Example</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <h3>Not Strict</h3>
-                <pre>this.window === window //true</pre>
-                <a href="demo/notStrict">Example</a>
+                <h3>Top-level JavaScript</h3>
+<pre>
+
+this === window //true
+
+</pre>
+                <a href="demo/topLevel">Example</a>
             </div>
         </div>
     </div>
@@ -71,7 +95,11 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <h3>call</h3>
-                <pre>read.call(thisArg, theHeroOfAges);</pre>
+<pre>
+
+read.call(thisArg, theHeroOfAges);
+
+</pre>
                 <a href="demo/call">Example</a>
             </div>
         </div>
@@ -81,7 +109,7 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <h3>apply</h3>
-                <pre>
+<pre>
 read.apply(thisArg, [
     mistBorn, 
     theWellOfAssension,
@@ -97,7 +125,11 @@ read.apply(thisArg, [
         <div class="panel panel-default">
             <div class="panel-body">
                 <h3>bind</h3>
-                <pre>read.bind(thisArg);</pre>
+<pre>
+
+read.bind(thisArg);
+
+</pre>
                 <a href="demo/bind">Example</a>
             </div>
         </div>

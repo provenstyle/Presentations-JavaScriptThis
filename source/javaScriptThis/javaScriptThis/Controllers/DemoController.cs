@@ -20,12 +20,7 @@ namespace javaScriptThis.Controllers
             return View();
         }
 
-        public ActionResult InStrictMode()
-        {
-            return View();
-        }
-
-        public ActionResult NotStrict()
+        public ActionResult TopLevel()
         {
             return View();
         }
