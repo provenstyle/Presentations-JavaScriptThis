@@ -4,8 +4,12 @@ namespace javaScriptThis.Controllers
 {
     public class DemoController : Controller
     {
-        // GET: Demo
         public ActionResult AsAFunction()
+        {
+            return View();
+        }
+
+        public ActionResult AsAFunctionInStrictMode()
         {
             return View();
         }

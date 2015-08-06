@@ -133,6 +133,7 @@
     <Content Include="app\changingThis\withBind.js" />
     <Content Include="app\changingThis\withCall.js" />
     <Content Include="app\insideAFunction\asAConstructor.js" />
+    <Content Include="app\insideAFunction\asAFunctionInStrictMode.js" />
     <Content Include="app\insideAFunction\asAFunction.js" />
     <Content Include="app\insideAFunction\asAMethod.js" />
     <Content Include="app\log.js" />
@@ -185,6 +186,7 @@
     <Content Include="Views\Demo\Call.cshtml" />
     <Content Include="Views\Demo\Apply.cshtml" />
     <Content Include="Views\Demo\Bind.cshtml" />
+    <Content Include="Views\Demo\AsAFunctionInStrictMode.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
