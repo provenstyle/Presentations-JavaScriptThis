@@ -1,4 +1,12 @@
-﻿
+﻿var f = function (a, b, c) {
+    console.log(this.x + a + b + c);
+}
+
+f.apply({ x: 4 }, [1, 2, 3]);
+
+f.apply({ x: 5 }, [1, 2, 3]);
+
+//======================================
 var Book = function(title, author) {
     this.title = title;
     this.author = author;
@@ -19,23 +27,12 @@ var stormLightArchive = [
 ];
 	
 var sandersonsBooks = [];
-sandersonsBooks.push.apply(sandersonsBooks, mistbornSeries);
-sandersonsBooks.push.apply(sandersonsBooks, stormLightArchive);
+Array.prototype.push.apply(sandersonsBooks, mistbornSeries);
+Array.prototype.push.apply(sandersonsBooks, stormLightArchive);
 
 //======================================
 
-var ids = [1,2,3];
-var promises = [];
-
-for (var i = 0; i < ids.length; i++) {
-    
-}
-
-$.when
-
-//======================================
-
+//Here we don't even care about the value of this
+//we just want to call a function with an array of arguments
 var max = Math.max.apply(null, [1, 2, 3]);
 var min = Math.min.apply(null, [1, 2, 3]);
-
-

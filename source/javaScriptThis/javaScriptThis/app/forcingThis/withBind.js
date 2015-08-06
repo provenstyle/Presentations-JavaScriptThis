@@ -1,4 +1,18 @@
-﻿var Book = function (title, author) {
+﻿var f = function(a) {
+    console.log(this.x + a);
+}
+
+f.call({ x: 3 }, 1);
+
+var bound = f.bind({ x: 9 });
+bound(1);
+
+//binding does not change the function
+f.call({ x: 3 }, 1);
+
+//======================================
+
+var Book = function (title, author) {
 
     var getInfo = function () {
         return this.title + ' by ' + this.author;
