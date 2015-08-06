@@ -4,23 +4,31 @@
 
 <div class="jumbotron">
     <h1><i>this</i></h1>
-    <p>5 rules for identifying the value of the JavaScript <i>this</i> keyword.</p>
+    <p>Questions for identifying the value of the JavaScript <i>this</i> keyword.</p>
 </div>
 
-<h2>When inside a function, how was the function executed?</h2>
+<h2>When <i>this</i> is used inside a function</h2>
+
+<pre>
+var read = function() {
+    console.log('Reading ' + this.title + ' by ' + this.author);
+}
+</pre>
+
+<h2>How is the function being invoked?</h2>
 
 <div class="row">
 
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-body">
-                <h3>As a function</h3>
+                <h3>1. As a function?</h3>
 <pre>
   
 read();
 
 </pre>
-                <p>this === undefined</p>
+                <p>this === window </p>
                 <a href="demo/asAFunction">Example</a>
             </div>
         </div>
@@ -29,29 +37,29 @@ read();
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-body">
-                <h3>As a function in strict mode</h3>
+                <h3>2. As a function in strict mode?</h3>
 <pre>
 "strict mode";
 
 read();
 </pre>
-                <p>this === window</p>
+                <p>this === undefined </p>
                 <a href="demo/asAFunctionInStrictMode">Example</a>
             </div>
         </div>
     </div>
 
 
-
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-body">
-                <h3>As a method</h3>
+                <h3>3. As a method?</h3>
 <pre>
 
 book.read();
 
 </pre>
+                <p>this === book </p>
                 <a href="demo/asAMethod">Example</a>
             </div>
         </div>
@@ -60,70 +68,93 @@ book.read();
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-body">
-                <h3>As a constructor</h3>
-<pre>
+                <h3>4. As a constructor?</h3>
+                <pre>
 
 var book = new Book();
 
 </pre>
+                <p>(this instanceof Book) === true </p>
                 <a href="demo/asAConstructor">Example</a>
             </div>
         </div>
     </div>
-</div>
 
 
-<h2>When outside a function</h2>
-<div class="row">
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-body">
-                <h3>Top-level JavaScript</h3>
-<pre>
-
-this === window //true
-
-</pre>
-                <a href="demo/topLevel">Example</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<h2>Changing <i>this</i></h2>
-
-<div class="row">
-    <div class="col-sm-4">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <h3>call</h3>
+                <h3>5. with call?</h3>
 <pre>
 
 read.call(thisArg, theHeroOfAges);
 
+
+
 </pre>
+                <p>this === thisArg</p>
                 <a href="demo/call">Example</a>
             </div>
         </div>
     </div>
 
-    <div class="col-sm-4">
+    <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-body">
-                <h3>apply</h3>
-<pre>
+                <h3>6. with apply?</h3>
+                <pre>
 read.apply(thisArg, [
     mistBorn, 
     theWellOfAssension,
     theHeroOfAges
 ]);
 </pre>
+                <p>this === thisArg</p>
                 <a href="demo/apply">Example</a>
             </div>
         </div>
     </div>
 
-    <div class="col-sm-4">
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>7. As a call back function?</h3>
+<pre>
+$.get('api/value/1', function(data){
+    this.parseData(data);
+});
+</pre>
+                <p>The value of this depends on how the funtion is invoked.</p>
+                <a href="demo/asACallback">Example</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<h2>When this is used outside a function</h2>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>8. Top-level JavaScript?</h3>
+<pre>
+
+this.Math
+
+</pre>
+                <p>this === window </p>
+                <a href="demo/topLevel">Example</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Forcing the value of <i>this</i></h2>
+
+<div class="row">
+    <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-body">
                 <h3>bind</h3>

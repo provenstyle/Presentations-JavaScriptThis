@@ -24,6 +24,10 @@ namespace javaScriptThis.Controllers
             return View();
         }
 
+        public ActionResult AsACallback()
+        {
+            return View();
+        }
         public ActionResult TopLevel()
         {
             return View();
