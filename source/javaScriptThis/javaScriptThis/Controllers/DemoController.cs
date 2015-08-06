@@ -33,12 +33,12 @@ namespace javaScriptThis.Controllers
             return View();
         }
 
-        public ActionResult Call()
+        public ActionResult WithCall()
         {
             return View();
         }
 
-        public ActionResult Apply()
+        public ActionResult WithApply()
         {
             return View();
         }

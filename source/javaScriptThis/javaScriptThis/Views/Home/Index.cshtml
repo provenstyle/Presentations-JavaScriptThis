@@ -84,7 +84,7 @@ var book = new Book();
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-body">
-                <h3>5. with call?</h3>
+                <h3>5. With call?</h3>
 <pre>
 
 read.call(thisArg, theHeroOfAges);
@@ -93,7 +93,7 @@ read.call(thisArg, theHeroOfAges);
 
 </pre>
                 <p>this === thisArg</p>
-                <a href="demo/call">Example</a>
+                <a href="demo/withCall">Example</a>
             </div>
         </div>
     </div>
@@ -101,7 +101,7 @@ read.call(thisArg, theHeroOfAges);
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-body">
-                <h3>6. with apply?</h3>
+                <h3>6. With apply?</h3>
                 <pre>
 read.apply(thisArg, [
     mistBorn, 
@@ -110,7 +110,7 @@ read.apply(thisArg, [
 ]);
 </pre>
                 <p>this === thisArg</p>
-                <a href="demo/apply">Example</a>
+                <a href="demo/withApply">Example</a>
             </div>
         </div>
     </div>
@@ -118,7 +118,7 @@ read.apply(thisArg, [
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-body">
-                <h3>7. As a call back function?</h3>
+                <h3>7. As a callback function?</h3>
 <pre>
 $.get('api/value/1', function(data){
     this.parseData(data);
@@ -160,9 +160,10 @@ this.Math
                 <h3>bind</h3>
 <pre>
 
-read.bind(thisArg);
-
+var bound = read.bind(thisArg);
+bound();
 </pre>
+                <p>this === thisArg</p>
                 <a href="demo/bind">Example</a>
             </div>
         </div>
