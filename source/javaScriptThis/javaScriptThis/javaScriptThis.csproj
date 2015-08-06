@@ -137,7 +137,6 @@
     <Content Include="app\insideAFunction\asAFunction.js" />
     <Content Include="app\insideAFunction\asACallback.js" />
     <Content Include="app\insideAFunction\asAMethod.js" />
-    <Content Include="app\log.js" />
     <Content Include="app\outsideAFunction\topLevel.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -183,7 +182,7 @@
     <Content Include="Views\Demo\AsAFunction.cshtml" />
     <Content Include="Views\Demo\AsAMethod.cshtml" />
     <Content Include="Views\Demo\AsAConstructor.cshtml" />
-    <Content Include="Views\Demo\topLevel.cshtml" />
+    <Content Include="Views\Demo\TopLevel.cshtml" />
     <Content Include="Views\Demo\WithCall.cshtml" />
     <Content Include="Views\Demo\WithApply.cshtml" />
     <Content Include="Views\Demo\Bind.cshtml" />
