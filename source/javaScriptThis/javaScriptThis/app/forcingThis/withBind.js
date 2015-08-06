@@ -2,6 +2,8 @@
     console.log(this.x + a);
 }
 
+f();
+
 f.call({ x: 3 }, 1);
 
 var bound = f.bind({ x: 9 });
