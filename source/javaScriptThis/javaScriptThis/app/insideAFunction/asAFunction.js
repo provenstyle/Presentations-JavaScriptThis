@@ -1,5 +1,5 @@
-﻿window.title = "The Way of Kings";
-window.author = "Brandon Sanderson";
+﻿//window.title = "The Way of Kings";
+//window.author = "Brandon Sanderson";
 
 var f = function () {
     console.log(this);
