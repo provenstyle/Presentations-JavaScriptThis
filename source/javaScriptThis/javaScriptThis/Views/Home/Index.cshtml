@@ -132,13 +132,30 @@ $.get('api/value/1', function(data){
 
 </div>
 
+<h2>Forcing the value of <i>this</i></h2>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>8. With bind?</h3>
+<pre>
+var bound = read.bind(thisArg);
+bound();
+</pre>
+                <p>this === thisArg</p>
+                <a href="demo/bind">Example</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <h2>When this is used outside a function</h2>
 <div class="row">
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-body">
-                <h3>8. Top-level JavaScript?</h3>
+                <h3>9. Top-level JavaScript?</h3>
 <pre>
 
 this.Math
@@ -151,21 +168,4 @@ this.Math
     </div>
 </div>
 
-<h2>Forcing the value of <i>this</i></h2>
 
-<div class="row">
-    <div class="col-sm-6">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <h3>bind</h3>
-<pre>
-
-var bound = read.bind(thisArg);
-bound();
-</pre>
-                <p>this === thisArg</p>
-                <a href="demo/bind">Example</a>
-            </div>
-        </div>
-    </div>
-</div>
