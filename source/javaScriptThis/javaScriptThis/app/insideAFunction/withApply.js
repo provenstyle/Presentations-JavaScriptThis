@@ -1,9 +1,4 @@
 ﻿
-var max = Math.max.apply(null, [1,2,3]);
-var min = Math.min.apply(null, [1,2,3]);
-
-//======================================
-
 var Book = function(title, author) {
     this.title = title;
     this.author = author;
@@ -24,8 +19,8 @@ var stormLightArchive = [
 ];
 	
 var sandersonsBooks = [];
-andersonsBooks.push.apply(sandersonsBooks, mistbornSeries);
-andersonsBooks.push.apply(sandersonsBooks, stormLightArchive);
+sandersonsBooks.push.apply(sandersonsBooks, mistbornSeries);
+sandersonsBooks.push.apply(sandersonsBooks, stormLightArchive);
 
 //======================================
 
@@ -37,3 +32,10 @@ for (var i = 0; i < ids.length; i++) {
 }
 
 $.when
+
+//======================================
+
+var max = Math.max.apply(null, [1, 2, 3]);
+var min = Math.min.apply(null, [1, 2, 3]);
+
+

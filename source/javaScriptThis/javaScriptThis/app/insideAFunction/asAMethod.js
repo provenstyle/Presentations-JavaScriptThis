@@ -12,16 +12,16 @@ o.m();
 var book = {
     title: 'The Well of Assension',
     author: 'Brandon Sanderson',
-    about: function() {
-        console.log(this.title + ' by ' + this.author);
+    read: function() {
+        console.log('Reading '+ this.title + ' by ' + this.author);
         console.log('Is book: ' + (this === book));
         console.log('Is window: ' + (this === window));
     }
 }
 
-book.about();
+book.read();
 
-var f = book.about;
+var f = book.read;
 f();
 
 //======================================
@@ -29,7 +29,7 @@ f();
 var anotherBook = {
     title: "Green Eggs and Ham",
     author: "Dr. Seuss",
-    about: book.about
+    read: book.read
 }
 
-anotherBook.about();
+anotherBook.read();
